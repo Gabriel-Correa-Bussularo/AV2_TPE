@@ -64,10 +64,8 @@ public class P1 {
             for (Thread t : threads) {
                 t.join();
             }
-
             // Fechar o arquivo de log no final
             writerLog.close();
-            
             // Termina com codigo 0 (sucesso)
             System.exit(0);
 
@@ -104,7 +102,7 @@ public class P1 {
             // Monta a linha do log conforme a regra
             String linhaLog = dataHora + ", " + nomeThread + ", " + id + ", " + respostaJson;
 
-            // Escrita no log com exclusao mutua (synchronized)
+            // Escrita no log com exclusao mutua
             escreverNoLog(linhaLog);
         }
     }
